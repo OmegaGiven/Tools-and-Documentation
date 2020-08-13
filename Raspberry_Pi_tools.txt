@@ -1,0 +1,22 @@
+Remote Desktop Connection:
+  1. enable SSH, found in Raspberry pi configuration GUI
+  2. run "ifconfig" in terminial to get ip address
+  3. install Putty on Remoting computer and enter the ip address
+  
+  1. In terminal run "sudo apt-get xrdp"
+  2. then run "sudo apt install xrdp"
+  3. On windows computer run GUI "Remote Desktop Connection"
+  4. type ip address found in step 2 above this method
+  
+Run apps on startup:
+  1. in terminal run "sudo nano /etc/rc.local"
+  2. add the commands to run your program. make sure to loggin as user to run most commands and also to make sure that rc.local can hit the exit0
+  3. example: adding "runuser -l pi -c "screen -dmS timer python3 Desktop/BreakAlarm/breakTimer.py""
+  
+Running programs in background:
+  1. in terminal run "sudo apt-get screen"
+  2. run "sudo apt install screen"
+  3. in terminal if you run "screen directory/programname.py" then it will work
+  4. you can exit and it will still run in the background.
+  4. to access the screen in a terminal do "screen -r" and it will reconnect you to the program that is running in the terminal
+  
